@@ -1,5 +1,6 @@
 import React from 'react';
-import video1 from "../../images/cv1.mp4";
+// import video1 from "../../images/cv1.mp4";
+const video1 = "https://www.w3schools.com/html/mov_bbb.mp4"; // Temporary placeholder
 import './VideographySlider.css';
 
 const VideographySlider = () => {
