@@ -1,0 +1,101 @@
+.custom-card {
+    transition: transform 0.3s ease-in-out;
+    border: none;
+}
+
+.custom-card:hover {
+    transform: translateY(-50px);
+}
+
+.icon {
+    font-size: 40px;
+    color: #00aaff; /* Adjust as needed */
+}
+
+/* Green underline animation only for "Media Offers" */
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distance of the underline from the text */
+    width: 0;
+    height: 8px; /* Thickness of the underline */
+    background-color: #28a745; /* Green color */
+    border-radius: 2px; /* Smooth rounded edges */
+    transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+/* Animation triggers when the page loads */
+.underline-animation::after {
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.p-3{
+    padding: 4rem;
+}
+.card-text{
+    font-size: 16px;
+}
+
+.custom-card {
+    border: 2px solid rgb(169, 206, 158);
+    border-radius: 8px; /* Optional: for rounded corners */
+    transition: border-color 0.3s ease; /* Optional: smooth transition for border color on hover */
+}
+
+.custom-card:hover {
+    border-color: green; /* Change border color when hovering */
+}
+.custom-card {
+    padding: 3rem;
+    border: 2px solid rgb(45, 135, 18);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px); /* Moves the card up */
+}
+
+.icon-size {
+    font-size: 2rem;
+}
+/* Ensure the row allows elements to overflow */
+.row {
+    overflow: visible; /* Prevents top border from being cut */
+}
+
+/* Custom card styling */
+.custom-card {
+    padding: 3rem;
+    border: 2px solid rgb(45, 135, 18);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Keeps card in place */
+}
+
+/* When hovering over the card */
+.custom-card:hover {
+    transform: translateY(-10px); /* Moves the card up */
+    z-index: 10; /* Ensures the hovered card stays above other elements */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Adds shadow for better visibility */
+}
+
+/* Add extra space so the card doesn’t get cut */
+.col-md-4 {
+    margin-bottom: 20px; /* Ensures enough space below the card */
+}

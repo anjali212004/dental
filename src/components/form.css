@@ -1,0 +1,31 @@
+/* Form control styles */
+.form-control:focus {
+    border-color: #fde047 !important;
+    box-shadow: 0 0 0 2px rgba(253, 224, 71, 0.2) !important;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-control:hover {
+    border-color: #fde047;
+}
+
+/* Button hover effect */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(253, 224, 71, 0.3);
+    background-color: #fcd34d !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .container {
+        padding: 0 24px;
+    }
+    
+    .card {
+        margin-top: 40px;
+    }
+}

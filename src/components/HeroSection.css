@@ -1,0 +1,329 @@
+/* Apply animations dynamically */
+.slide-in-right {
+  animation: slideInRight 0.5s ease-in-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-in-out forwards;
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.5s ease-in-out forwards;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.5s ease-in-out forwards;
+}
+
+/* Slider Dot Active State */
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.slider-dot.active {
+  background-color: #ffc107; /* Match button color */
+}
+
+/* Fade effect for smooth transitions */
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Highlight text animation */
+.highlight {
+  font-weight: bold;
+}
+
+/* Slider dots styling */
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+  background-color: #ffc107;
+}
+/* Slide-in animations (Right to Left) */
+@keyframes slideInRightToLeft {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1;
+  }
+}
+
+/* Slide-out animations (Right to Left) */
+@keyframes slideOutRightToLeft {
+  from {
+    transform: translateX(0); /* Start at the current position */
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%); /* Exit off-screen to the left */
+    opacity: 0;
+  }
+}
+
+/* Apply animations dynamically */
+.slide-in {
+  animation: slideInRightToLeft 0.5s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slideOutRightToLeft 0.5s ease-in-out forwards;
+}
+
+@media (max-width: 1100px) {
+  .hero-section {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .highlight {
+    font-size: 24px;
+  }
+}
+
+.hero-section {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.row {
+  width: 100%; /* Ensure rows take up full width */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+img {
+  max-width: 100%; /* Make sure images are not larger than their container */
+  height: auto; /* Maintain aspect ratio */
+}
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 0; /* Remove extra padding */
+  }
+
+  .col-12 {
+    padding-left: 15px;
+    padding-right: 15px; /* Reduce horizontal padding */
+  }
+}
+img {
+  width: 100%; /* Ensure images take up the available width */
+  height: auto; /* Maintain the aspect ratio */
+}
+/* HeroSection.css */
+
+/* Ensure no horizontal scrolling */
+.hero-section {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.row {
+  width: 100%;
+  overflow-x: hidden; /* Prevent overflow */
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Styles for screens below 1200px */
+@media (max-width: 1199px) {
+  .hero-section {
+    padding: 0 10px; /* Add some padding, adjust if needed */
+  }
+
+  .col-12 {
+    padding-left: 15px;
+    padding-right: 15px; /* Ensure there is no horizontal padding causing overflow */
+  }
+
+  .highlight {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  h1 {
+    font-size: 28px; /* Adjust heading size for smaller screens */
+  }
+
+  /* Make sure the image fits well */
+  .img-fluid {
+    max-height: 35vh; /* Adjust image height for smaller screens */
+    width: 100%; /* Ensure it fills the container */
+  }
+
+  /* Optional: Adjust the button size */
+  .btn-lg {
+    font-size: 16px;
+    padding: 10px 20px; /* Adjust button size */
+  }
+
+  /* Center slider dots */
+  .slider-dot {
+    margin: 0 5px;
+  }
+}
+
+/* For mobile (below 768px), ensure full responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22px; /* Reduce font size on very small screens */
+  }
+
+  .highlight {
+    font-size: 20px; /* Adjust highlight font size */
+  }
+
+  .col-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn-lg {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+.text-success,
+.highlight {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+h1 .text-success,
+h1 .highlight,
+a .text-success,
+a .highlight {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+@keyframes slideInRightToLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+    text-decoration: none; /* ✅ Ensure no underline */
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    text-decoration: none; /* ✅ Ensure no underline */
+  }
+}
+
+@keyframes slideOutRightToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    text-decoration: none; /* ✅ Ensure no underline */
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+    text-decoration: none; /* ✅ Ensure no underline */
+  }
+}
+/* Ensure no underline when hover or focus during animation */
+.text-success:hover,
+.text-success:focus,
+.highlight:hover,
+.highlight:focus {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* Add these styles for the logo slider: */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-text {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add these new styles for the logo slider */
+.logo-slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.logo-slider-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo-item {
+  font-size: 24px;
+  font-weight: 500;
+  color: #666;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  min-width: 180px;
+  text-align: center;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments for logo slider */
+@media (max-width: 768px) {
+  .logo-slider-wrapper {
+    gap: 15px;
+  }
+
+  .logo-item {
+    font-size: 18px;
+    min-width: 140px;
+    padding: 8px 15px;
+  }
+}
+

@@ -1,0 +1,30 @@
+.custom-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-10px);
+  }
+  /* Green underline animation only for "Media Offers" */
+  .underline-animation {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 10px;
+    background-color: #076e1d;
+    border-radius: 2px;
+    transition: width 0.5s ease-in-out;z-index: -1; 
+}
+
+/* Animation triggers when the page loads */
+.underline-animation::after {
+    animation: slide-in 1s forwards;
+}

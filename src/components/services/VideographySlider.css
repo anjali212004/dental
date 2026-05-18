@@ -1,0 +1,17 @@
+.video-slider {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .video-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .video-slide video {
+      max-width: 100%; /* Ensures videos are responsive on mobile */
+    }
+  }
+  

@@ -1,0 +1,50 @@
+/* Green underline animation only for "Media Offers" */
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distance of the underline from the text */
+    width: 0;
+    height: 8px; /* Thickness of the underline */
+    background-color: #28a745; /* Green color */
+    border-radius: 2px; /* Smooth rounded edges */
+    transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+/* Animation triggers when the page loads */
+.underline-animation::after {
+    animation: slide-in 1s forwards;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: #e2e8f0 !important;
+}
+
+.accordion-button::after {
+    background-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.accordion-item {
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom animation for accordion */
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}

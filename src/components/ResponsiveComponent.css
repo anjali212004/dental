@@ -1,0 +1,161 @@
+/* Styling for card animations */
+.custom-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image fade-in animation */
+  .custom-img {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  /* ResponsiveComponent.css */
+
+/* Ensure buttons are properly styled and responsive */
+.btn {
+    font-size: 1rem; /* Base size for text */
+    padding: 0.5rem 1rem; /* Add padding for better appearance */
+    transition: transform 0.2s ease; /* Add hover effect */
+  }
+  
+  /* Hover effect for buttons */
+  .btn:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .btn {
+      font-size: 0.9rem; /* Smaller font size */
+      padding: 0.4rem 0.8rem; /* Adjust padding */
+      margin-bottom: 0.5rem; /* Add spacing between buttons */
+    }
+  
+    /* Stack buttons vertically on small screens */
+    .d-flex {
+      flex-direction: column; /* Vertical layout */
+      align-items: center; /* Center buttons */
+    }
+  }
+  
+  .custom-img {
+    width: 100%; /* Jo column ka width hoga, uske hisaab se adjust hoga */
+    height: 250px; /* Fixed height set kar di */
+    object-fit: contain; /* Image crop hokar frame mein fit hogi */
+    border-radius: 10px; /* Rounded corners ke liye */
+  }
+  .card-img-top {
+    height: 250px !important;
+    object-fit: cover;
+  }
+    
+  .custom-btn {
+  background: #ccc; /* Default gray background */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 200px; /* Fixed width */
+  text-align: center;
+}
+
+/* Active button */
+.custom-btn.active {
+  background: linear-gradient(135deg, #28a745, #218838); /* Green gradient when active */
+}
+
+/* Hover effect */
+.custom-btn:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+  transform: scale(1.05);
+}
+
+/* Click effect */
+.custom-btn:active {
+  background: #155724;
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+
+  .custom-btn {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 10px;
+  }
+}
+.custom-btn {
+  background: linear-gradient(135deg, #d9d9d9, #b3b3b3); /* Light gray gradient */
+  color: #333; /* Dark text for better visibility */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 220px; /* Fixed width */
+  text-align: center;
+}
+
+/* Default button hover effect */
+.custom-btn:hover {
+  background: linear-gradient(135deg, #b3b3b3, #999);
+  color: white;
+  
+}
+
+/* Active (clicked) button */
+.custom-btn.active {
+  background: linear-gradient(135deg, #28a745, #218838); /* Green gradient */
+  color: white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+ 
+}
+
+/* Click effect */
+.custom-btn:active {
+  background: #155724;
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,60 @@
+:root{
+  --main-col: #169d53;
+  --sec-col: #094886;
+}
+
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.title{
+  font-size: 43px;
+   font-weight: 600;
+    color: var(--sec-col);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.subTitle{
+  color: var(--main-col);
+  font-weight: 600;
+}
+
+.text-main{
+  color: var(--main-col);
+}
+
+.border-main{
+  border-color: var(--main-col) !important;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;   /* Circle size */
+  height: 90px;  /* Same as width for a perfect circle */
+  background-color: white;
+  border: 1px solid gray; /* Gray border */
+  border-bottom: 3px solid #169d53; /* Green bottom border */
+  text-align: center;
+  padding: 0px;
+  border-top: 3px solid #094886 ; /* Green bottom border */
+  /* Rounded borders only on the left and right */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 70px;  /* Adjust as needed */
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;  /* Adjust as needed */
+  border-bottom-right-radius: 70px; /* Adjust as needed */
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}

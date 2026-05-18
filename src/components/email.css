@@ -1,0 +1,81 @@
+/* Green underline animation only for "Media Offers" */
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distance of the underline from the text */
+    width: 0;
+    height: 8px; /* Thickness of the underline */
+    background-color: #28a745; /* Green color */
+    border-radius: 2px; /* Smooth rounded edges */
+    transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+/* Animation triggers when the page loads */
+.underline-animation::after {
+    animation: slide-in 1s forwards;
+}
+
+/* Keep all your existing styles */
+
+/* Add these media queries for responsiveness */
+@media (max-width: 992px) {
+    .d-flex.flex-row {
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+
+    .text-left {
+        text-align: center !important;
+        width: 100%;
+    }
+
+    .text-left .title {
+        margin-left: 0 !important;
+    }
+
+    .d-flex.flex-column {
+        margin-right: 0 !important;
+        width: 100%;
+    }
+
+    .input-group {
+        max-width: 100% !important;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .d-flex.flex-row {
+        padding: 2rem !important;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+
+    .form-control, 
+    .btn-success {
+        width: 100% !important;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .d-flex.flex-row {
+        padding: 1.5rem !important;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+}

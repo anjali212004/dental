@@ -1,0 +1,16 @@
+.content-section-btn{
+    display: inline-block;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-bottom: 10px solid transparent;
+
+
+    &.active{
+        border-bottom: 10px solid var(--main-col);
+    }
+}

@@ -1,0 +1,64 @@
+/* Button animation on hover */
+.animated-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .animated-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button fade-in animation */
+  .animated-button {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Image fade-in animation */
+  .animated-image {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+   /* Green underline animation only for "Media Offers" */
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distance of the underline from the text */
+    width: 0;
+    height: 8px; /* Thickness of the underline */
+    background-color: #28a745; /* Green color */
+    border-radius: 2px; /* Smooth rounded edges */
+    transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+/* Animation triggers when the page loads */
+.underline-animation::after {
+    animation: slide-in 1s forwards;
+}

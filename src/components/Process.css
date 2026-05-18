@@ -1,0 +1,24 @@
+.process-cards{
+    counter-reset: process-card;
+}
+.process-card{
+border-top: 2px solid var(--main-col);
+padding: 3rem 1.5rem;
+border-radius: .25rem;
+counter-increment: process-card;
+position: relative;
+isolation: isolate;
+
+&::before{
+    content: '0' counter(process-card);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1;
+    font-size: 120px;
+    font-weight: bold;
+    z-index: -10;
+    opacity: 0.1;
+    color: var(--main-col);
+}
+}

@@ -1,0 +1,22 @@
+/* Green underline animation only for "Media Offers" */
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distance of the underline from the text */
+    width: 0;
+    height: 8px; /* Thickness of the underline */
+    background-color: #28a745; /* Green color */
+    border-radius: 2px; /* Smooth rounded edges */
+    transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+/* Animation triggers when the page loads */
+.underline-animation::after {
+    animation: slide-in 1s forwards;
+}

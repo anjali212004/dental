@@ -1,0 +1,70 @@
+/* For image hover effect */
+.hover-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-image {
+    transition: transform 0.5s ease-in-out;
+}
+
+.hover-image-container:hover .hover-image {
+    transform: scale(1.1);
+}
+
+/* Strategy Card */
+.strategy-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.strategy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Font Awesome Icon */
+.icon {
+    color: #17a2b8;
+    transition: color 0.3s ease-in-out;
+}
+
+.strategy-card:hover .icon {
+    color: #007bff;
+}
+/* Green underline animation only for "Media Offers" */
+.underline-animation {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distance of the underline from the text */
+    width: 0;
+    height: 12px; /* Thickness of the underline */
+    background-color: #28a745; /* Green color */
+    border-radius: 2px; /* Smooth rounded edges */
+    transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+/* Animation triggers when the page loads */
+.underline-animation::after {
+    animation: slide-in 1s forwards;
+}
+
+.strategy-card {
+    display: flex;
+    height: 100%;
+}
+
+.strategy-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

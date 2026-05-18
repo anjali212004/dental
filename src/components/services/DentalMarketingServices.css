@@ -1,0 +1,161 @@
+/* Main container */
+.dentalmarketing {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+
+  
+  /* Grid Layout (4 cards per row) */
+  .dentalmarketing__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Strictly 4 cards per row */
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Service Card */
+  .dentalmarketing__card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.2);
+    padding: 15px;
+    position: relative;
+    min-height: 200px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .dentalmarketing__card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Right Green Counter */
+  .dentalmarketing__card-left {
+    background: #28a745;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 100%;
+  }
+  
+  /* Card Content */
+  .dentalmarketing__card-content {
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Icon Styling */
+  .dentalmarketing__icon {
+    
+    background: #fafffb;
+    color: rgb(75, 170, 56);
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    border-radius: 50%;
+    font-size: 24px;
+    
+  }
+  
+
+
+  
+  /* Flexbox Layout to Move Counter to Right */
+  .dentalmarketing__card {
+    display: flex;
+    flex-direction: row-reverse; /* Moves the counter to the right */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .dentalmarketing__grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .dentalmarketing__grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .dentalmarketing__grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 card per row on mobile */
+    }
+  }
+  /* Card Layout */
+.dentalmarketing__card {
+  display: flex;
+  align-items: flex-start; /* Align items to the left */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.2);
+  padding: 15px;
+  position: relative;
+  min-height: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dentalmarketing__card:hover {
+  transform: translateY(-5px);
+}
+
+/* Right Green Counter */
+.dentalmarketing__card-left {
+  background: #28a745;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  margin-right: 15px; /* Add space between counter and content */
+}
+
+/* Card Content */
+.dentalmarketing__card-content {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: left; /* Align content to the left */
+}
+
+/* Icon Styling */
+.dentalmarketing__icon {
+  width: 50px;
+  height: 50px;
+  background: #fafffb;
+  color: rgb(75, 170, 56);
+  display: flex;
+  
+  border-radius: 50%;
+  font-size: 24px;
+ 
+}
+
+/* Title */
+.dentalmarketing__card-content h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Description */
+.dentalmarketing__card-description {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+}

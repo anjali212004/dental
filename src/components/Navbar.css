@@ -1,0 +1,21 @@
+.mobile-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .mobile-nav-container {
+    width: auto;
+  }
+}
+
+/* Optional: If you want the dropdown to appear on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  margin-top: 0;
+}
